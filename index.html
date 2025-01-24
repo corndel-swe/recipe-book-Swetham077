@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tapas Recipe Book</title>
+</head>
+<body>
+    <div class="cover-page">
+        <h1>Recipe Book</h1>
+    </div>
+
+    <section id="starters">
+        <h2>Starters</h2>
+        <ul class="recipe-list">
+            <li>
+                <a href="starters/patatasBravasRecipe.html">
+                    <img src="Images/patatas Bravas.jpg" alt="Patatas Bravas with Garlic Aioli">
+                    Patatas Bravas with Garlic Aioli
+                </a>
+            </li>
+            <li>
+                <a href="starters/calamariRecipe.html">
+                    <img src="Images/calamari.jpg" alt="Calamares a la Romana (Spanish Fried Calamari)">
+                    Calamares a la Romana (Spanish Fried Calamari)
+                </a>
+            </li>
+            <li>
+                <a href="starters/jalepenoPoppers.html">
+                    <img src="Images/jalepeno poppers.jpg" alt="Jalapeño Poppers">
+                    Jalapeño Poppers
+                </a>
+            </li>
+            <li>
+                <a href="starters/GambasAlAjillo.html">
+                    <img src="Images/gambasaslajillo.JPG" alt="Gambas al Ajillo (Shrimp in Garlic Sauce)">
+                    Gambas al Ajillo (Shrimp in Garlic Sauce)
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="main-courses">
+        <h2>Main Courses</h2>
+        <ul class="recipe-list">
+            <li>
+                <a href="mains/paella.html">
+                    <img src="Images/paella.JPG" alt="Paella">
+                    Paella
+                </a>
+            </li>
+            <li>
+                <a href="mains/PolloalAjillo.html">
+                    <img src="Images/ajillo.JPG" alt="Pollo al Ajillo">
+                    Pollo al Ajillo
+                </a>
+            </li>
+            <li>
+                <a href="mains/Gazpacho.html">
+                    <img src="Images/gazpacho.JPG" alt="Gazpacho">
+                    Gazpacho
+                </a>
+            </li>
+            <li>
+                <a href="mains/TortillaEspañola.html">
+                    <img src="Images/tortilla espanola.JPG" alt="Tortilla Española">
+                    Tortilla Española
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="reviews" class="form-container">
+        <h2>Submit a Review</h2>
+        <form action="/submit_review" method="post">
+            <label for="recipe">Recipe:</label>
+            <select id="recipe" name="recipe">
+                <option value="patatas_bravas">Patatas Bravas with Garlic Aioli</option>
+                <option value="calamares_romana">Calamares a la Romana (Spanish Fried Calamari)</option>
+                <option value="jalapeno_poppers">Jalapeño Poppers</option>
+                <option value="paella">Paella</option>
+
+            </select>
+
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required/>
+
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" required></textarea>
+
+            <label for="username">Your Name:</label>
+            <input type="text" id="username" name="username" required/>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required/>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required/>
+
+            <label for="file">Upload a Picture:</label>
+            <input type="file" id="file" name="file"/>
+
+            <input type="submit" value="Submit Review"/>
+        </form>
+    </section>
+</body>
+</html>
